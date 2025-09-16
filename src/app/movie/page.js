@@ -9,12 +9,12 @@ const Movie = async () => {
   const url = "https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit=10&country=us";
 
   const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_KEY,
-      'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
-    }
-  };
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': process.env.RAPID_KEY,
+            'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
+        }
+    }; 
 
   const res = await fetch(url, options);
   const data = await res.json();
